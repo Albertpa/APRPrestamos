@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Objeto" representedClassName="Objeto" syncable="YES">
+        <attribute name="diaPrestado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="prestadoA" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Persona" inverseName="tomaPrestado" inverseEntity="Persona" syncable="YES"/>
+    </entity>
+    <entity name="Persona" representedClassName="Persona" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tomaPrestado" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Objeto" inverseName="prestadoA" inverseEntity="Objeto" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Objeto" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="Persona" positionX="-198" positionY="209" width="128" height="88"/>
+    </elements>
+</model>
